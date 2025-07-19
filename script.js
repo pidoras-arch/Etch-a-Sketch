@@ -20,9 +20,16 @@ function createGrid(numPerSide = 16){
             const cell = document.createElement("div");
             cell.classList.add("cell");
             row.appendChild(cell);
-            cell.addEventListener("mouseover",()=> cell.style.backgroundColor = "green")
+            cell.addEventListener("mouseover",()=> cell.style.backgroundColor = randomizeColor())
         }
         containerDiv.appendChild(row);
     }
+}
+function randomizeColor(){
+    let r = (Math.floor(Math.random()*256));
+    let g = (Math.floor(Math.random()*256));
+    let b = (Math.floor(Math.random()*256));
+    let element = `rgb(${r},${g},${b})`;
+    return element;
 }
 createGrid();
