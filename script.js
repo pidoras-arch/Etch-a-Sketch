@@ -3,6 +3,8 @@ createNewGridButton = document.querySelector("button")
 createNewGridButton.textContent = "New Grid";
 createNewGridButton.addEventListener("click",()=>{
     let num = prompt("how many cells do you want on each side?");
+    //A larger number of squares results in more computer resources being used,
+    //potentially causing delays, freezing, or crashing that we want to prevent.
     if(num>=100){
         alert("number is too big make sure it's less than 100");
     }else{
